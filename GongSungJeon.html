@@ -2,80 +2,65 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>공성전</title>
+    <title>공성전 요일별 안내</title>
     <style>
         body {
             background-color: black;
-            color: white;
+            margin: 0;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            color: white; /* 기본 글씨 색상을 흰색으로 설정 */
         }
-        a {
-            color: #ff4444; /* 돌아가기 링크 색상 */
+
+        /* 7개의 상자를 가로로 나란히 묶어주는 컨테이너 */
+        .days-container {
+            display: flex;
+            gap: 10px; /* 상자 사이의 간격 */
+            width: 95%; /* 모니터 가로 너비의 95%를 꽉 채워서 사용 */
+            height: 60vh; /* 화면 세로 높이의 60% 크기로 큼직하게 설정 */
+        }
+
+        /* 개별 요일 상자의 디자인 */
+        .day-box {
+            flex: 1; /* 7개의 상자가 남는 공간 없이 동일한 비율로 너비를 나눠 가짐 */
+            border: 3px solid red; /* 두께 3px의 빨간색 테두리 */
+            background-color: transparent; /* 배경은 투명(검은색)하게 유지 */
+            
+            /* 글씨를 상자 정중앙에 배치 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* 글씨 폰트 설정 */
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* 돌아가기 버튼 디자인 */
+        .back-link {
+            color: #ff4444;
             font-size: 20px;
             text-decoration: none;
-            margin-top: 20px;
+            margin-top: 40px; /* 상자들과의 간격 띄우기 */
         }
-        /* 영웅 카드 전체 틀 */
-.hero-card {
-    position: relative;
-    width: 150px; /* 카드 가로 크기 */
-    height: 180px; /* 카드 세로 크기 */
-    border-radius: 30px 10px 0 0; /* 왼쪽 위를 크게 둥글게, 오른쪽 위는 살짝 둥글게 처리 */
-    overflow: hidden; /* 영역 밖으로 튀어나온 이미지 숨김 */
-    background-color: #e5a74e; /* 일러스트 뒷배경 기본 색상 (주황빛) */
-}
-
-/* 영웅 얼굴 일러스트 */
-.hero-card .portrait {
-    width: 100%;
-    height: calc(100% - 35px); /* 하단 이름표 영역(35px)을 제외한 나머지 꽉 채우기 */
-    object-fit: cover;
-}
-
-/* 좌측 하단 역할군 아이콘 */
-.hero-card .role-icon {
-    position: absolute;
-    bottom: 35px; /* 이름표 바로 위에 위치 */
-    left: 0;
-    width: 35px;
-    height: 35px;
-    border-radius: 8px;
-}
-
-/* 하단 검은색 이름표 영역 */
-.hero-card .name-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 35px;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    /* 글씨 주변 파란색 빛(네온) 효과 */
-    text-shadow: -1px -1px 2px #00aaff, 1px -1px 2px #00aaff, -1px 1px 2px #00aaff, 1px 1px 2px #00aaff;
-}
     </style>
 </head>
 <body>
-    <h1>공성전을 눌러서 넘어온 새로운 페이지입니다!</h1>
-    
-    <!-- 루디 영웅 카드 예시 -->
-<div class="hero-card">
-    <img src="ludy.png" alt="루디 일러스트" class="portrait">
-    <img src="defense.png" alt="방어형 아이콘" class="role-icon">
-    <div class="name-bar">루디</div>
-</div>
-    
-    <!-- href="index.html"을 통해 다시 메인 화면으로 돌아갈 수 있습니다 -->
-    <a href="index.html">메인 화면으로 돌아가기</a>
+    <!-- 7개의 빨간 테두리 상자 -->
+    <div class="days-container">
+        <div class="day-box">월요일</div>
+        <div class="day-box">화요일</div>
+        <div class="day-box">수요일</div>
+        <div class="day-box">목요일</div>
+        <div class="day-box">금요일</div>
+        <div class="day-box">토요일</div>
+        <div class="day-box">일요일</div>
+    </div>
+
+    <!-- 이전 화면으로 돌아가기 위한 링크 -->
+    <a href="index.html" class="back-link">메인 화면으로 돌아가기</a>
 </body>
 </html>
