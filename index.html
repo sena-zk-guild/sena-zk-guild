@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>세븐나이츠 리버스</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+        }
+        
+        img {
+            transform: translateY(-4cm);
+            max-width: 25%;
+            margin-bottom: 60px;
+        }
+
+        .box-container {
+            display: flex;
+            gap: 30px;
+        }
+
+        /* 버튼 역할을 할 상자의 디자인 */
+        .box {
+            width: 280px;
+            height: 160px;
+            background-color: white;
+            border: 4px solid black;
+            border-radius: 20px;
+            
+            /* a 태그 특유의 파란색 글씨와 밑줄 제거 */
+            text-decoration: none;
+            color: black;
+            
+            /* 글씨를 상자 정중앙에 배치 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* 글씨 크기와 굵기 설정 */
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img src="GuildLogo.png" alt="세븐나이츠 리버스 로고">
+    
+    <div class="box-container">
+        <!-- href="이동할 주소" 를 적어줍니다. target="_blank"는 새 창에서 열리게 해줍니다. -->
+        <a href="GongSungJeon.html" class="box">공성전</a>
+        <a href="GuildJeon.html" class="box">길드전</a>
+        <a href="GangLim.html" class="box">강림 원정대</a>
+    </div>
+</body>
+</html>
