@@ -22,7 +22,7 @@
             width: 95%; 
             height: 20vh; 
             margin-bottom: 20px;
-            transform: translate(0px, -120px);
+            transform: translate(0px, -130px);
         }
 
         /* 개별 요일 상자의 디자인 */
@@ -50,6 +50,38 @@
                 -2px  2px 0 #000,
                  2px  2px 0 #000;
         }
+        /* 두 번째 줄 전체 묶음 (가로 크기 조절) */
+        .bottom-container {
+            display: flex;
+            gap: 10px;
+            
+            /* 윗줄(70%)과 가로 크기를 다르게 설정해보세요 (예: 90% 또는 50%) */
+            width: 90%; 
+            
+            /* 윗줄(30vh)과 높이를 다르게 설정해보세요 */
+            height: 15vh; 
+            
+            margin-bottom: 20px;
+        }
+        
+        /* 두 번째 줄 개별 상자 디자인 */
+        .bottom-box {
+            flex: 1; /* 7등분 유지 */
+            
+            /* 윗줄과 테두리 색상을 다르게 해보세요 (예: 파란색) */
+            border: 3px solid blue; 
+            border-radius: 20px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            
+            /* 윗줄(40px)보다 글씨 크기를 다르게 설정해보세요 */
+            font-size: 20px; 
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
 
         /* 돌아가기 버튼 디자인 */
         .back-link {
@@ -71,15 +103,15 @@
         <div class="day-box">토요일</div>
         <div class="day-box">일요일</div>
     </div>
-    <!-- 두 번째 줄: 새로 추가한 7개 상자 (여기 안의 글씨를 원하시는 대로 수정하세요) -->
-    <div class="days-container">
-        <div class="day-box">새 상자 1</div>
-        <div class="day-box">새 상자 2</div>
-        <div class="day-box">새 상자 3</div>
-        <div class="day-box">새 상자 4</div>
-        <div class="day-box">새 상자 5</div>
-        <div class="day-box">새 상자 6</div>
-        <div class="day-box">새 상자 7</div>
+    <!-- 두 번째 줄: 새로 만든 이름(class) 적용하기 -->
+    <div class="bottom-container"> <!-- class 이름 변경 -->
+        <div class="bottom-box">새 상자 1</div> <!-- class 이름 변경 -->
+        <div class="bottom-box">새 상자 2</div>
+        <div class="bottom-box">새 상자 3</div>
+        <div class="bottom-box">새 상자 4</div>
+        <div class="bottom-box">새 상자 5</div>
+        <div class="bottom-box">새 상자 6</div>
+        <div class="bottom-box">새 상자 7</div>
     </div>
 
     <!-- 이전 화면으로 돌아가기 위한 링크 -->
