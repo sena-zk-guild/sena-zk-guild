@@ -24,27 +24,32 @@
         }
 
         /* 개별 요일 상자의 디자인 */
-        /* 기존 .day-box를 아래 코드로 덮어씁니다 */
         .day-box {
             flex: 1;
             border: 3px solid red;
-            background-color: transparent;
+            
+            /* 글씨 위치 정렬 (올려주신 사진처럼 아래쪽에 배치) */
             display: flex;
-            /* 사진과 글씨를 위아래(세로)로 배치하는 핵심 코드 */
-            flex-direction: column; 
             justify-content: center;
-            align-items: center;
+            align-items: flex-end; /* 글씨를 바닥으로 내립니다 */
+            padding-bottom: 40px; /* 바닥에서 40px 정도 띄워줍니다 */
+            
             font-size: 40px;
             font-weight: bold;
-            gap: 20px; /* 사진과 글씨 사이의 간격 */
-        }
+            color: white;
         
-        /* 새로 추가: 상자 안에 들어가는 사진의 크기와 모양 설정 */
-        .day-box img {
-            width: 80%; /* 사진 너비를 상자 크기의 80%로 맞춤 */
-            max-height: 60%; /* 사진이 상자 밖으로 삐져나가지 않게 제한 */
-            object-fit: cover; /* 사진 비율이 찌그러지지 않게 유지 */
-            border-radius: 15px; /* 사진 모서리를 둥글게 깎음 */
+            /* --- 여기서부터 배경 이미지 관련 핵심 설정 --- */
+            background-color: black;
+            background-size: contain; /* 이미지가 잘리지 않고 쏙 들어가게 (여백 없이 꽉 채우려면 cover) */
+            background-position: center; /* 이미지를 정중앙에 배치 */
+            background-repeat: no-repeat; /* 이미지가 바둑판처럼 반복되는 것 방지 */
+        
+            /* 배경 사진과 글씨가 겹쳐도 잘 보이도록 글씨에 굵은 검은색 테두리 추가 */
+            text-shadow: 
+                -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000;
         }
 
         /* 돌아가기 버튼 디자인 */
@@ -59,35 +64,14 @@
 <body>
     <!-- 7개의 빨간 테두리 상자 -->
     <div class="days-container">
-        <div class="day-box">
-            <img src="GSJrudy.png" alt="월요일 영웅">
-            <span>월요일</span>
-        </div>
-        <div class="day-box">
-            <img src="tue.png" alt="화요일 영웅">
-            <span>화요일</span>
-        </div>
-        <div class="day-box">
-            <img src="wed.png" alt="수요일 영웅">
-            <span>수요일</span>
-        </div>
-        <div class="day-box">
-            <img src="thu.png" alt="목요일 영웅">
-            <span>목요일</span>
-        </div>
-        <div class="day-box">
-            <img src="fri.png" alt="금요일 영웅">
-            <span>금요일</span>
-        </div>
-        <div class="day-box">
-            <img src="sat.png" alt="토요일 영웅">
-            <span>토요일</span>
+        <div class="day-box" style="background-image: url('GSJrudy.png');">월요일</div>
+        <div class="day-box" style="background-image: url('tue.png');">화요일</div>
+        <div class="day-box" style="background-image: url('wed.png');">수요일</div>
+        <div class="day-box" style="background-image: url('thu.png');">목요일</div>
+        <div class="day-box" style="background-image: url('fri.png');">금요일</div>
+        <div class="day-box" style="background-image: url('sat.png');">토요일</div>
+        <div class="day-box" style="background-image: url('sun.png');">일요일</div>
     </div>
-    <div class="day-box">
-        <img src="sun.png" alt="일요일 영웅">
-        <span>일요일</span>
-    </div>
-</div>
 
     <!-- 이전 화면으로 돌아가기 위한 링크 -->
     <a href="index.html" class="back-link">메인 화면으로 돌아가기</a>
