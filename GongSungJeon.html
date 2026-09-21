@@ -1,138 +1,78 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>공성전 요일별 안내</title>
-    <style> 
-    html {
-        scroll-behavior: smooth;
-    }
-        body {
-            background-color: black;
-            margin: 0;
+    <meta charset="UTF-8">
+    <title>공성전 요일별 안내</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            color: white; /* 기본 글씨 색상을 흰색으로 설정 */
+        }
 
-            <!-- 이전 화면으로 돌아가기 위한 링크 -->
-            <a href="index.html" class="back-link">메인 화면으로 돌아가기</a>
-            
-            /* 1. 화면 높이 고정 해제 (가장 중요) */
-            /* height: 100vh; 에서 min-height로 변경하여 내용이 많으면 알아서 늘어나게 합니다 */
-            min-height: 100vh; 
-            
-            display: flex;
-            flex-direction: column; 
-            
-            /* 2. 정중앙 고정 해제 (삭제) */
-            /* justify-content: center; <-- 이 코드를 지워야 위에서부터 차곡차곡 쌓이며 스크롤이 생깁니다 */
-            
-            /* 대신 맨 위에 약간의 여백을 줘서 답답하지 않게 합니다 */
-            padding-top: 200px; 
-            padding-bottom: 50px; /* 맨 아래쪽 여백 */
-            
-            align-items: center;
-            color: white; 
-        }
+        /* 7개의 상자를 가로로 나란히 묶어주는 컨테이너 */
+        .days-container {
+            display: flex;
+            gap: 10px; /* 상자 사이의 간격 */
+            width: 95%; /* 모니터 가로 너비의 95%를 꽉 채워서 사용 */
+            height: 60vh; /* 화면 세로 높이의 60% 크기로 큼직하게 설정 */
+        }
 
-        /* 7개의 상자를 가로로 나란히 묶어주는 컨테이너 */
-        .days-container {
-            display: flex;
-            gap: 10px; 
-            width: 95%; 
-            height: 20vh; 
-            margin-bottom: 20px;
-            transform: translate(0px, -130px);
-        }
+        /* 개별 요일 상자의 디자인 */
+        .day-box {
+            flex: 1;
+            border: 3px solid red;
+            
+            /* 글씨 위치 정렬 (올려주신 사진처럼 아래쪽에 배치) */
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 글씨를 바닥으로 내립니다 */
+            
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+        
+            /* --- 여기서부터 배경 이미지 관련 핵심 설정 --- */
+            background-color: black;
+            background-size: 1000%; /* 이미지가 잘리지 않고 쏙 들어가게 (여백 없이 꽉 채우려면 cover) */
+            background-repeat: no-repeat; /* 이미지가 바둑판처럼 반복되는 것 방지 */
+        
+            /* 배경 사진과 글씨가 겹쳐도 잘 보이도록 글씨에 굵은 검은색 테두리 추가 */
+            text-shadow: 
+                -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000;
+        }
 
-        /* 개별 요일 상자의 디자인 */
-        .day-box {
-            flex: 1;
-            border: 3px solid red;
-            border-radius: 20px;
-            
-            /* 글씨 위치 정렬 */
-            display: flex;
-            justify-content: center;
-            align-items: center; 
-            
-            font-size: 40px;
-            font-weight: bold;
-            color: white;
-        
-            /* 기본 배경색 지정 */
-            background-color: black;
-        
-            /* 글씨에 굵은 검은색 테두리 추가 (필요 없다면 지우셔도 됩니다) */
-            text-shadow: 
-                -2px -2px 0 #000,
-                 2px -2px 0 #000,
-                -2px  2px 0 #000,
-                 2px  2px 0 #000;
-        }
-        /* 두 번째 줄 전체 묶음 (가로 크기 조절) */
-        .bottom-container {
-            display: flex;
-            gap: 10px;
-            
-            /* 윗줄(70%)과 가로 크기를 다르게 설정해보세요 (예: 90% 또는 50%) */
-            width: 95%; 
-            
-            /* 윗줄(30vh)과 높이를 다르게 설정해보세요 */
-            height: 60vh; 
-
-            margin-top: -60px;
-            margin-bottom: 20px;
-        }
-        
-        /* 두 번째 줄 개별 상자 디자인 */
-        .bottom-box {
-            flex: 1; /* 7등분 유지 */
-            
-            /* 윗줄과 테두리 색상을 다르게 해보세요 (예: 파란색) */
-            border: 3px solid blue; 
-            border-radius: 20px;
-            
-            display: flex;
-            justify-content: center;
-            align-items: center; 
-            
-            /* 윗줄(40px)보다 글씨 크기를 다르게 설정해보세요 */
-            font-size: 20px; 
-            font-weight: bold;
-            color: white;
-            background-color: black;
-        }
-
-        /* 돌아가기 버튼 디자인 */
-        .back-link {
-            color: #ff4444;
-            font-size: 20px;
-            text-decoration: none;
-            /* 아래 3줄이 글씨를 맨 위로 구출해내는 핵심 코드입니다 */
-            position: absolute; /* 다른 상자들과 겹치지 않게 공중으로 띄움 */
-            top: 40px; /* 화면 맨 위 천장에서 40px 만큼 아래로 떨어뜨림 */
-            z-index: 10; /* 상자들보다 무조건 맨 앞(위)에 보이도록 순서 보장 */
-        }
-    </style>
+        /* 돌아가기 버튼 디자인 */
+        .back-link {
+            color: #ff4444;
+            font-size: 20px;
+            text-decoration: none;
+            margin-top: 40px; /* 상자들과의 간격 띄우기 */
+        }
+    </style>
 </head>
 <body>
-    <!-- 7개의 빨간 테두리 상자 (이미지 관련 코드 제거됨) -->
-    <div class="days-container">
-        <div class="day-box">월요일</div>
-        <div class="day-box">화요일</div>
-        <div class="day-box">수요일</div>
-        <div class="day-box">목요일</div>
-        <div class="day-box">금요일</div>
-        <div class="day-box">토요일</div>
-        <div class="day-box">일요일</div>
-    </div>
-    <!-- 두 번째 줄: 새로 만든 이름(class) 적용하기 -->
-    <div class="bottom-container"> <!-- class 이름 변경 -->
-        <div class="bottom-box">새 상자 1</div> <!-- class 이름 변경 -->
-        <div class="bottom-box">새 상자 2</div>
-        <div class="bottom-box">새 상자 3</div>
-        <div class="bottom-box">새 상자 4</div>
-        <div class="bottom-box">새 상자 5</div>
-        <div class="bottom-box">새 상자 6</div>
-        <div class="bottom-box">새 상자 7</div>
-    </div>
+    <!-- 7개의 빨간 테두리 상자 -->
+    <div class="days-container">
+        <!-- 0.5 숫자를 조절하여 투명도를 결정합니다. (0은 투명, 1은 완전 검은색) -->
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('GSJrudy.png'); background-position: 64% 15%">월요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('GSJeileene.png'); background-position: 53% 15%">화요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('GSJrachel.png'); background-position: 64% 15%">수요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('thu.png'); background-position: 64% 15%">목요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('fri.png'); background-position: 64% 15%">금요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sat.png'); background-position: 64% 15%">토요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sun.png'); background-position: 64% 15%">일요일</div>
+    </div>
+
+    <!-- 이전 화면으로 돌아가기 위한 링크 -->
+    <a href="index.html" class="back-link">메인 화면으로 돌아가기</a>
 </body>
 </html>
