@@ -106,7 +106,10 @@
             color: #ff4444;
             font-size: 20px;
             text-decoration: none;
-            margin-bottom: 50px; 
+            /* 아래 3줄이 글씨를 맨 위로 구출해내는 핵심 코드입니다 */
+            position: absolute; /* 다른 상자들과 겹치지 않게 공중으로 띄움 */
+            top: 40px; /* 화면 맨 위 천장에서 40px 만큼 아래로 떨어뜨림 */
+            z-index: 10; /* 상자들보다 무조건 맨 앞(위)에 보이도록 순서 보장 */
         }
     </style>
 </head>
