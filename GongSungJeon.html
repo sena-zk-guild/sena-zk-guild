@@ -26,16 +26,26 @@
         /* 개별 요일 상자의 디자인 */
         .day-box {
             flex: 1;
-            border: 2px solid red; /* 사진처럼 날렵하고 깔끔한 빨간색 테두리 */
-            
-            /* 글씨를 상자 정중앙에 배치 */
+            border: 2px solid red;
             display: flex;
             justify-content: center;
             align-items: center; 
-            
             font-size: 32px;
             font-weight: bold;
+            color: white;
+        
+            /* --- 여기서부터 배경 이미지 관련 설정 --- */
             background-color: black;
+            background-size: cover; /* 사진을 상자 크기에 여백 없이 꽉 맞춥니다 */
+            background-position: center; /* 사진의 중앙을 기준으로 보여줍니다 */
+            background-repeat: no-repeat;
+            
+            /* 사진 위에서 글씨가 뚜렷하게 보이도록 검은 테두리 추가 */
+            text-shadow: 
+                -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000;
         }
 
         /* 돌아가기 버튼 디자인 */
@@ -50,16 +60,16 @@
 </head>
 <body>
     <!-- 7개의 빨간 테두리 상자 -->
-    <div class="days-container">
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('GSJrudy.png'); background-position: 64% 15%;">월요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('GSJeileene.png'); background-position: 53% 15%;">화요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('GSJrachel.png'); background-position: 64% 15%;">수요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('thu.png'); background-position: 64% 15%;">목요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('fri.png'); background-position: 64% 15%;">금요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sat.png'); background-position: 64% 15%;">토요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sun.png'); background-position: 64% 15%;">일요일</div>
+   <div class="days-container">
+        <!-- url('...') 안에 깃허브에 올리신 실제 사진 파일명을 정확히 적어주세요 -->
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJrudy.png');">월요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJeileene.png');">화요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJrachel.png');">수요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('thu.png');">목요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('fri.png');">금요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sat.png');">토요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('sun.png');">일요일</div>
     </div>
-
     <!-- 이전 화면으로 돌아가기 위한 링크 -->
     <a href="index.html" class="back-link">메인 화면으로 돌아가기</a>
 </body>
