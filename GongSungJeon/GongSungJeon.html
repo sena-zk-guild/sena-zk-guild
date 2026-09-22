@@ -38,7 +38,7 @@
             color: white;
         
             background-color: black;
-            background-size: cover; 
+            /* background-size: cover;  */
             background-repeat: no-repeat; 
         
             text-shadow: 
@@ -86,15 +86,16 @@
         </svg>
     </a>
 
-    <!-- 7개의 빨간 테두리 상자 -->
+    <!-- 7개의 빨간 테두리 상자 (상자별로 background-size를 다르게 지정) -->
     <div class="days-container">
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJrudy.png'); background-position: 50% 20%;">월요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJeileene.png'); background-position: 50% 30%;">화요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJrachel.png'); background-position: 60% 40%;">수요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJdellons.png'); background-position: 50% 50%;">목요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJjave.png'); background-position: 40% 50%;">금요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJspike.png'); background-position: 50% 60%;">토요일</div>
-        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJchris.png'); background-position: 50% 80%;">일요일</div>
+        <!-- 월요일: 사진을 150% 크기로 확대 (숫자가 클수록 줌인됩니다) -->
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJrudy.png'); background-position: 50% 20%; background-size: 150%;">월요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJeileene.png'); background-position: 50% 30%; background-size: 120%;">화요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJrachel.png'); background-position: 60% 40%; background-size: 200%;">수요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJdellons.png'); background-position: 50% 50%; background-size: 130%;">목요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJjave.png'); background-position: 40% 50%; background-size: 140%;">금요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJspike.png'); background-position: 50% 60%; background-size: 150%;">토요일</div>
+        <div class="day-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GSJchris.png'); background-position: 50% 80%; background-size: 160%;">일요일</div>
     </div>
 </body>
 </html>
