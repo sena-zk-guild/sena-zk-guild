@@ -23,13 +23,27 @@
             align-items: center; /* 내용들을 가운데 정렬 */
         }
 
-        /* 뒤로 가기 링크 버튼 디자인 */
-        .back-btn {
-            color: #ff4444;
-            font-size: 20px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-bottom: 50px;
+        /* 왼쪽 사이드바(뒤로 가기) 디자인 */
+        .sidebar-back {
+            position: fixed; 
+            left: 0;
+            top: 0;
+            bottom: 0; 
+            width: 60px; 
+            background-color: #a0a0a0; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            z-index: 100; 
+            opacity: 0.35; 
+            transition: opacity 0.3s ease, background-color 0.3s ease; 
+        }
+
+        .sidebar-back:hover {
+            opacity: 1; 
+            background-color: #909090; 
         }
 
         /* 스크롤(슬라이드)이 잘 되는지 확인하기 위한 임시 상자 */
