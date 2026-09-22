@@ -15,16 +15,16 @@
             color: white; 
         }
 
-        /* 5개의 상자를 묶어주는 컨테이너 */
+        /* 전체 상자들을 묶어주는 투명한 뼈대 */
         .boxes-container {
             display: flex;
             gap: 10px; 
             width: 85%; 
-            height: 50vh; 
-            margin-left: 50px; /* 사이드바 공간만큼 오른쪽으로 밀어줌 */
+            height: 70vh; /* 세로 길이를 길게 연장 */
+            margin-left: 50px; 
         }
 
-        /* 개별 상자의 디자인 (5개가 동일한 비율로 가로 공간을 나눠 가집니다) */
+        /* 개별 영웅 상자의 디자인 */
         .ganglim-box {
             flex: 1;
             border: 2px solid red; 
@@ -75,7 +75,7 @@
     </style>
 </head>
 <body>
-    <!-- 왼쪽 회색 사이드바와 하얀색 화살표 (메인 화면인 index.html로 이동) -->
+    <!-- 왼쪽 사이드바 -->
     <a href="../index.html" class="sidebar-back">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 14L4 9l5-5"/>
@@ -83,11 +83,14 @@
         </svg>
     </a>
 
-    <!-- 5개의 빨간 테두리 상자 -->
+    <!-- 5개의 구역 (가운데 3구역만 flex:2 로 너비가 2배 넓음) -->
     <div class="boxes-container">
-        <div class="ganglim-box"태오</div>
+        <div class="ganglim-box">1구역</div>
         <div class="ganglim-box">카일</div>
-        <div class="ganglim-box" style="flex: 2;">3파괴신</div>
+        
+        <!-- 세 번째 상자를 2배 넓게 적용 -->
+        <div class="ganglim-box" style="flex: 2;">파괴신</div>
+        
         <div class="ganglim-box">연희</div>
         <div class="ganglim-box">카르마</div>
     </div>
