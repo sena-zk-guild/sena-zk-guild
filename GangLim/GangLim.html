@@ -20,7 +20,7 @@
             display: flex;
             gap: 10px; 
             width: 85%; 
-            height: 70vh; /* 세로 길이를 길게 연장 */
+            height: 70vh; 
             margin-left: 50px; 
         }
 
@@ -83,16 +83,13 @@
         </svg>
     </a>
 
-    <!-- 5개의 구역 (가운데 3구역만 flex:2 로 너비가 2배 넓음) -->
+    <!-- 5개의 구역 (파괴신을 제외한 4곳에 배경 이미지 적용) -->
     <div class="boxes-container">
-        <div class="ganglim-box">태오</div>
-        <div class="ganglim-box">카일</div>
-        
-        <!-- 세 번째 상자를 2배 넓게 적용 -->
+        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLteo.png');">태오</div>
+        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLkyle.png');">카일</div>
         <div class="ganglim-box" style="flex: 2;">파괴신</div>
-        
-        <div class="ganglim-box">연희</div>
-        <div class="ganglim-box">카르마</div>
+        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLyeonhee.png');">연희</div>
+        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLkarma.png');">카르마</div>
     </div>
 </body>
 </html>
