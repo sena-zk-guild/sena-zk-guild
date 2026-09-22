@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <!-- 1. [수정] 모바일 화면 반응형 필수 메타 태그 추가 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공성전 세부 공략</title>
     <style>
         html {
@@ -49,6 +51,8 @@
             justify-content: center;
             align-items: center;
             border-bottom: 1px solid #333; 
+            padding: 20px 0;
+            box-sizing: border-box;
         }
 
         /* --- 공략 표(테이블) 디자인 --- */
@@ -65,21 +69,25 @@
             width: 100%;
             border-collapse: collapse; 
             text-align: center;
+            /* 2. [수정] 열 너비를 지정된 비율로 강제 고정하는 속성 */
+            table-layout: fixed;
         }
 
         th {
             background-color: #8b0000; 
             color: white;
-            padding: 15px;
+            padding: 15px 5px;
             font-size: 18px;
             border-bottom: 2px solid #ff4444;
         }
 
         td {
-            padding: 15px;
-            font-size: 16px;
+            padding: 12px 8px;
+            font-size: 15px;
             border-bottom: 1px solid #333;
-            vertical-align: middle; /* 내용들을 수직 중앙 정렬 */
+            vertical-align: middle;
+            /* 2. [수정] 긴 글자가 표 밖으로 넘치지 않고 줄바꿈되게 처리 */
+            word-break: break-all;
         }
 
         tr:last-child td {
@@ -92,12 +100,30 @@
 
         /* --- 영웅 사진 디자인 --- */
         .hero-img {
-            width: 60px; /* 사진 가로 크기 */
-            height: 60px; /* 사진 세로 크기 */
-            border-radius: 10px; /* 사진 모서리를 둥글게 */
-            object-fit: cover; /* 사진 비율이 깨지지 않게 꽉 채움 */
-            margin-bottom: 8px; /* 사진과 아래 글씨 사이의 간격 */
-            border: 1px solid #555; /* 얇은 회색 테두리 */
+            width: 60px; 
+            height: 60px; 
+            border-radius: 10px; 
+            object-fit: cover; 
+            margin-bottom: 8px; 
+            border: 1px solid #555; 
+        }
+
+        /* 2. [수정] 모바일 접속 시 표가 잘리지 않도록 가로 스크롤 추가 */
+        @media (max-width: 768px) {
+            body {
+                margin-left: 0;
+                padding-left: 45px;
+            }
+            .sidebar-back {
+                width: 40px;
+            }
+            .table-container {
+                width: 95%;
+                overflow-x: auto; /* 모바일에서 표가 넘치면 가로 스크롤 생성 */
+            }
+            table {
+                min-width: 600px; /* 표의 최소 너비를 유지하여 글씨가 구겨지지 않게 함 */
+            }
         }
     </style>
 </head>
@@ -115,6 +141,14 @@
         <h1>월요일 공략 (루디)</h1>
         <div class="table-container">
             <table>
+                <!-- 3. [수정] 각 열의 가로 너비 비율 지정 (총합 100%) -->
+                <colgroup>
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                    <col style="width: 22%;">
+                    <col style="width: 20%;">
+                    <col style="width: 25%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>위치 / 속공순위</th>
@@ -126,7 +160,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>보호 진형 (전방) / 속공 1순위</td>
+                        <td>보호 진형 (전방)<br>속공 1순위</td>
                         <td>
                             <img src="Guide/Guidemiho.png" class="hero-img" alt="미호"><br>
                             미호(서브 딜)
@@ -136,9 +170,8 @@
                         <td>치확 100%, 약공 46%, 치피, 모공 최대한<br>비스킷 6초 이하면 약공 치피 최대한</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (후방) / 속공 2순위</td>
+                        <td>보호 진형 (후방)<br>속공 2순위</td>
                         <td>
-                            <!-- 사진과 이름을 넣는 부분 -->
                             <img src="Guide/Guidenata.png" class="hero-img" alt="나타"><br>
                             나타(메인 딜)
                         </td>
@@ -146,11 +179,9 @@
                         <td>토벌(공성), 토벌(치확, 약공)</td>
                         <td>치확 67%, 약공 46%, 치피,모공 최대한</td>
                     </tr>
-                   
                     <tr>
-                        <td>보호 진형 (전방) / 속공 3~5 순위</td>
+                        <td>보호 진형 (전방)<br>속공 3~5 순위</td>
                         <td>
-                            <!-- 사진과 이름을 넣는 부분 -->
                             <img src="Guide/Guidelina.png" class="hero-img" alt="리나"><br>
                             리나(아군 버프)
                         </td>
@@ -159,9 +190,8 @@
                         <td>잘 안죽음 속공 맞추기</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (전방) / 속공 3~5 순위</td>
+                        <td>보호 진형 (전방)<br>속공 3~5 순위</td>
                         <td>
-                            <!-- 사진과 이름을 넣는 부분 -->
                             <img src="Guide/Guidebiscuit.png" class="hero-img" alt="비스킷"><br>
                             비스킷(아군 버프, 버프해제)
                         </td>
@@ -170,9 +200,8 @@
                         <td>치확 100% 필수, 치피 최대한 챙기기<br>죽는 경우 도트 반지 빼고 권능 반지<br>속공 맞추기</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (전방) / 속공 3~5 순위</td>
+                        <td>보호 진형 (전방)<br>속공 3~5 순위</td>
                         <td>
-                            <!-- 사진과 이름을 넣는 부분 -->
                             <img src="Guide/Guideevan.png" class="hero-img" alt="에반"><br>
                             에반(기절 면역)
                         </td>
@@ -181,12 +210,11 @@
                         <td>주술사 장비 없으면 수문장이나 복수자<br>속공 맞추기</td>
                     </tr>
                     <tr>
-                        <td>
-                            스킬 순서
-                        </td>
-                        <td colspan="4" style="text-align: center; padding: 5px;">
+                        <td>스킬 순서</td>
+                        <td colspan="4" style="text-align: center; padding: 12px;">
                             비스킷 아래(0턴) -> 미호 위 [1라(4턴)] -> 나타 아래[2라(4턴)] -> 나타 위(4턴) -> 비스킷 위(8턴) -> 리나 위(12턴) -> 미호 아해(16턴) -> 미호 위(20턴) -> 나타 아래(24턴) - 나타 위(28턴)
                             <br> -> 비스킷 위(32턴) -> 비스킷 아래(36턴) -> 미호 아래(40턴) -> 나타 아래(44턴)-> 나타 위(48턴) -> 리나 위(52턴) -> 비스킷 위(56턴) -> 미호 아래(60턴) -> 나타 아래(64턴) -> 나타 위(68턴)
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -198,6 +226,13 @@
         <h1>화요일 공략 (아일린)</h1>
         <div class="table-container">
             <table>
+                <colgroup>
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                    <col style="width: 22%;">
+                    <col style="width: 20%;">
+                    <col style="width: 25%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>위치</th>
@@ -225,6 +260,13 @@
         <h1>수요일 공략 (레이첼)</h1>
         <div class="table-container">
             <table>
+                <colgroup>
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                    <col style="width: 22%;">
+                    <col style="width: 20%;">
+                    <col style="width: 25%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>위치</th>
@@ -252,6 +294,13 @@
         <h1>목요일 공략 (델론즈)</h1>
         <div class="table-container">
             <table>
+                <colgroup>
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                    <col style="width: 22%;">
+                    <col style="width: 20%;">
+                    <col style="width: 25%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>위치</th>
@@ -279,6 +328,13 @@
         <h1>금요일 공략 (제이브)</h1>
         <div class="table-container">
             <table>
+                <colgroup>
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                    <col style="width: 22%;">
+                    <col style="width: 20%;">
+                    <col style="width: 25%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>위치</th>
@@ -306,6 +362,13 @@
         <h1>토요일 공략 (스파이크)</h1>
         <div class="table-container">
             <table>
+                <colgroup>
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                    <col style="width: 22%;">
+                    <col style="width: 20%;">
+                    <col style="width: 25%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>위치</th>
@@ -333,6 +396,13 @@
         <h1>일요일 공략 (크리스)</h1>
         <div class="table-container">
             <table>
+                <colgroup>
+                    <col style="width: 18%;">
+                    <col style="width: 15%;">
+                    <col style="width: 22%;">
+                    <col style="width: 20%;">
+                    <col style="width: 25%;">
+                </colgroup>
                 <thead>
                     <tr>
                         <th>위치</th>
