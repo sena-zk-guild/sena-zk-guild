@@ -20,7 +20,7 @@
             display: flex;
             gap: 10px; 
             width: 85%; 
-            height: 70vh; 
+            height: 70vh; /* 세로 길이를 길게 연장 */
             margin-left: 50px; 
         }
 
@@ -83,13 +83,13 @@
         </svg>
     </a>
 
-    <!-- 5개의 구역 (파괴신을 제외한 4곳에 배경 이미지 적용) -->
+    <!-- 5개의 구역 (a 태그로 변경하고 href="Guide.html#id" 링크 연결) -->
     <div class="boxes-container">
-        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLteo.png'); background-size: 240%; background-position: 50% 65%;">태오</div>
-        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLkyle.png'); background-size: 310%; background-position: 50% 40%;">카일</div>
-        <div class="ganglim-box" style="flex: 2;">파괴신</div>
-        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLyeonhee.png');">연희</div>
-        <div class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLkarma.png');">카르마</div>
+        <a href="Guide.html#teo" class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLteo.png'); background-size: 240%; background-position: 50% 65%;">태오</a>
+        <a href="Guide.html#kyle" class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLkyle.png'); background-size: 310%; background-position: 50% 40%;">카일</a>
+        <a href="Guide.html#destroyer" class="ganglim-box" style="flex: 2;">파괴신</a>
+        <a href="Guide.html#yeonhee" class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLyeonhee.png');">연희</a>
+        <a href="Guide.html#karma" class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLkarma.png');">카르마</a>
     </div>
 </body>
 </html>
