@@ -2,6 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <!-- 👇 모바일 화면 최적화를 위한 필수 뷰포트 태그 추가 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>강림 원정대</title>
     <style>
         body {
@@ -20,7 +22,7 @@
             display: flex;
             gap: 10px; 
             width: 85%; 
-            height: 70vh; /* 세로 길이를 길게 연장 */
+            height: 70vh; 
             margin-left: 50px; 
         }
 
@@ -72,6 +74,34 @@
             opacity: 1; 
             background-color: #909090; 
         }
+
+        /* --- 📱 모바일 화면 전용 설정 (미디어 쿼리) --- */
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                padding: 20px 15px 20px 45px; /* 모바일에서 본문 여백 및 사이드바 공간 확보 */
+                box-sizing: border-box;
+            }
+
+            .boxes-container {
+                flex-direction: column; /* 모바일에서는 세로로 한 줄씩 쌓기 */
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+                gap: 12px;
+            }
+
+            .ganglim-box {
+                width: 100%;
+                height: 110px; /* 모바일에서 각 영웅 상자의 높이 지정 */
+                background-size: cover !important;
+                background-position: center !important;
+            }
+
+            .sidebar-back {
+                width: 40px; /* 모바일에서 사이드바 크기 최적화 */
+            }
+        }
     </style>
 </head>
 <body>
@@ -83,7 +113,7 @@
         </svg>
     </a>
 
-    <!-- 5개의 구역 (a 태그로 변경하고 href="Guide.html#id" 링크 연결) -->
+    <!-- 5개의 구역 -->
     <div class="boxes-container">
         <a href="Guide.html#teo" class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLteo.png'); background-size: 240%; background-position: 50% 65%;">태오</a>
         <a href="Guide.html#kyle" class="ganglim-box" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('GLkyle.png'); background-size: 310%; background-position: 50% 40%;">카일</a>
