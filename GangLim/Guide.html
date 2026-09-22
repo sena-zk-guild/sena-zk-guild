@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>강림 원정대 세부 공략</title>
+    <style>
+        html {
+            scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+        }
 
+        body {
+            background-color: black; 
+            color: white; 
+            margin: 0;
+            
+            /* 왼쪽 사이드바 두께(60px)만큼 전체 내용을 오른쪽으로 밀어줍니다 */
+            margin-left: 60px; 
+            
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 왼쪽 사이드바(뒤로 가기) 디자인 */
+        .sidebar-back {
+            position: fixed; 
+            left: 0;
+            top: 0;
+            bottom: 0; 
+            width: 60px; 
+            background-color: #a0a0a0; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            z-index: 100; 
+            opacity: 0.35; 
+            transition: opacity 0.3s ease, background-color 0.3s ease; 
+        }
+
+        .sidebar-back:hover {
+            opacity: 1; 
+            background-color: #909090; 
+        }
+
+        /* --- 5개 영웅 구역 디자인 --- */
+        .guide-section {
+            /* 각 구역이 화면 세로 높이(100vh)를 꽉 채우도록 설정 */
+            min-height: 100vh; 
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            /* 스크롤 시 구역 구분이 잘 되도록 바닥에 얇은 어두운 선 추가 */
+            border-bottom: 1px solid #333; 
+        }
+
+        /* 내용이 들어갈 점선 상자 */
+        .content-box {
+            width: 80%;
+            min-height: 60vh;
+            border: 2px dashed gray; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 왼쪽 회색 사이드바 (강림 원정대 메인 화면으로 돌아가기) -->
+    <a href="GangLim.html" class="sidebar-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5"/>
+            <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/>
+        </svg>
+    </a>
+
+    <!-- 1. 태오 구역 (id="teo") -->
+    <div class="guide-section" id="teo">
+        <h1>태오 공략</h1>
+        <div class="content-box">태오 공략 내용(글, 사진, 표 등)이 들어갈 자리입니다.</div>
+    </div>
+
+    <!-- 2. 카일 구역 (id="kyle") -->
+    <div class="guide-section" id="kyle">
+        <h1>카일 공략</h1>
+        <div class="content-box">카일 공략 내용이 들어갈 자리입니다.</div>
+    </div>
+
+  
+    <!-- 5. 카르마 구역 (id="karma") -->
+    <div class="guide-section" id="karma">
+        <h1>카르마 공략</h1>
+        <div class="content-box">카르마 공략 내용이 들어갈 자리입니다.</div>
+    </div>
+
+    <!-- 4. 연희 구역 (id="yeonhee") -->
+    <div class="guide-section" id="yeonhee">
+        <h1>연희 공략</h1>
+        <div class="content-box">연희 공략 내용이 들어갈 자리입니다.</div>
+    </div>
+
+    <!-- 3. 파괴신 구역 (id="destroyer") -->
+    <div class="guide-section" id="destroyer">
+        <h1>파괴신 공략</h1>
+        <div class="content-box">파괴신 공략 내용이 들어갈 자리입니다.</div>
+    </div>
+</body>
+</html>
