@@ -5,17 +5,14 @@
     <title>공성전 세부 공략</title>
     <style>
         html {
-            scroll-behavior: smooth; /* 부드러운 스크롤 */
+            scroll-behavior: smooth; 
         }
 
         body {
             background-color: black; 
             color: white; 
             margin: 0;
-            
-            /* 왼쪽 사이드바 두께(60px)만큼 전체 내용을 오른쪽으로 밀어서 정중앙을 맞춥니다 */
             margin-left: 60px; 
-            
             display: flex;
             flex-direction: column;
         }
@@ -45,29 +42,51 @@
 
         /* --- 7개 요일 구역 디자인 --- */
         .guide-section {
-            /* 각 구역이 무조건 화면 세로 높이(100vh)를 꽉 채우도록 설정 */
             min-height: 100vh; 
             width: 100%;
-            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
-            /* 스크롤 시 구역 구분이 잘 되도록 바닥에 얇은 어두운 선 추가 */
             border-bottom: 1px solid #333; 
         }
 
-        /* 내용이 들어갈 점선 상자 */
-        .content-box {
+        /* --- 공략 표(테이블) 디자인 --- */
+        .table-container {
             width: 80%;
-            min-height: 60vh;
-            border: 2px dashed gray; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: gray;
-            margin-top: 20px;
+            margin-top: 30px;
+            background-color: #111; 
+            border-radius: 8px; 
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+            text-align: center;
+        }
+
+        th {
+            background-color: #8b0000; /* 공성전 느낌의 어두운 붉은색 */
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border-bottom: 2px solid #ff4444;
+        }
+
+        td {
+            padding: 15px;
+            font-size: 16px;
+            border-bottom: 1px solid #333;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #222;
         }
     </style>
 </head>
@@ -80,46 +99,200 @@
         </svg>
     </a>
 
-    <!-- 1. 월요일 구역 (id를 지정해두면 다른 페이지에서 바로 여기로 넘어올 수 있습니다) -->
+    <!-- 1. 월요일 구역 -->
     <div class="guide-section" id="mon">
         <h1>월요일 공략 (루디)</h1>
-        <div class="content-box">월요일 공략 내용(글, 사진, 표 등)이 들어갈 자리입니다.</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>보호 진형 (후방)</td>
+                        <td>메인 딜러</td>
+                        <td>치명 / 반격</td>
+                        <td>치뎀증 / 용기</td>
+                        <td>메인 딜러</td>
+                    </tr>
+                    <tr>
+                        <td>기본 진형 (전방)</td>
+                        <td>버퍼</td>
+                        <td>속공 / 생명</td>
+                        <td>막기 / 권능</td>
+                        <td>피해량 증가 버프</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- 2. 화요일 구역 -->
     <div class="guide-section" id="tue">
         <h1>화요일 공략 (아일린)</h1>
-        <div class="content-box">화요일 공략 내용이 들어갈 자리입니다.</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- 3. 수요일 구역 -->
     <div class="guide-section" id="wed">
         <h1>수요일 공략 (레이첼)</h1>
-        <div class="content-box">수요일 공략 내용이 들어갈 자리입니다.</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- 4. 목요일 구역 -->
     <div class="guide-section" id="thu">
         <h1>목요일 공략 (델론즈)</h1>
-        <div class="content-box">목요일 공략 내용이 들어갈 자리입니다.</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- 5. 금요일 구역 -->
     <div class="guide-section" id="fri">
         <h1>금요일 공략 (제이브)</h1>
-        <div class="content-box">금요일 공략 내용이 들어갈 자리입니다.</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- 6. 토요일 구역 -->
     <div class="guide-section" id="sat">
         <h1>토요일 공략 (스파이크)</h1>
-        <div class="content-box">토요일 공략 내용이 들어갈 자리입니다.</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- 7. 일요일 구역 -->
     <div class="guide-section" id="sun">
         <h1>일요일 공략 (크리스)</h1>
-        <div class="content-box">일요일 공략 내용이 들어갈 자리입니다.</div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
