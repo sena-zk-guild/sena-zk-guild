@@ -5,14 +5,17 @@
     <title>강림 원정대 세부 공략</title>
     <style>
         html {
-            scroll-behavior: smooth; 
+            scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
         }
 
         body {
             background-color: black; 
             color: white; 
             margin: 0;
+            
+            /* 왼쪽 사이드바 두께(60px)만큼 전체 내용을 오른쪽으로 밀어줍니다 */
             margin-left: 60px; 
+            
             display: flex;
             flex-direction: column;
         }
@@ -40,14 +43,18 @@
             background-color: #909090; 
         }
 
-        /* 5개 영웅 구역 디자인 */
+        /* --- 5개 영웅 구역 디자인 --- */
         .guide-section {
+            /* 각 구역이 화면 세로 높이(100vh)를 꽉 채우도록 설정 */
             min-height: 100vh; 
             width: 100%;
+            
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
+            /* 스크롤 시 구역 구분이 잘 되도록 바닥에 얇은 어두운 선 추가 */
             border-bottom: 1px solid #333; 
         }
 
@@ -68,11 +75,11 @@
         }
 
         th {
-            background-color: #6a0dad; /* 강림 원정대 느낌의 짙은 보라/붉은 톤 */
+            background-color: #8b0000; /* 강림 원정대 느낌의 어두운 붉은색 */
             color: white;
             padding: 15px;
             font-size: 18px;
-            border-bottom: 2px solid #9932cc;
+            border-bottom: 2px solid #ff4444;
         }
 
         td {
@@ -93,7 +100,7 @@
     </style>
 </head>
 <body>
-    <!-- 왼쪽 회색 사이드바 -->
+    <!-- 왼쪽 회색 사이드바 (강림 원정대 메인 화면으로 돌아가기) -->
     <a href="GangLim.html" class="sidebar-back">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 14L4 9l5-5"/>
@@ -101,7 +108,7 @@
         </svg>
     </a>
 
-    <!-- 1. 태오 구역 -->
+    <!-- 1. 태오 구역 (id="teo") -->
     <div class="guide-section" id="teo">
         <h1>태오 공략</h1>
         <div class="table-container">
@@ -118,31 +125,24 @@
                 <tbody>
                     <tr>
                         <td>보호 진형 (후방)</td>
-                        <td>메인 딜러명</td>
+                        <td>메인 딜러</td>
                         <td>치명 / 반격</td>
                         <td>치뎀증 / 용기</td>
                         <td>메인 딜러</td>
                     </tr>
                     <tr>
                         <td>기본 진형 (전방)</td>
-                        <td>버퍼 영웅명</td>
+                        <td>버퍼</td>
                         <td>속공 / 생명</td>
                         <td>막기 / 권능</td>
                         <td>피해량 증가 버프</td>
-                    </tr>
-                    <tr>
-                        <td>기본 진형 (전방)</td>
-                        <td>디버퍼 영웅명</td>
-                        <td>속공 / 생명</td>
-                        <td>막기 / 축복</td>
-                        <td>방어력 감소 디버프</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- 2. 카일 구역 -->
+    <!-- 2. 카일 구역 (id="kyle") -->
     <div class="guide-section" id="kyle">
         <h1>카일 공략</h1>
         <div class="table-container">
@@ -158,33 +158,6 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>내용을</td>
-                        <td>자유롭게</td>
-                        <td>수정해서</td>
-                        <td>사용해</td>
-                        <td>보세요</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- 3. 파괴신 구역 -->
-    <div class="guide-section" id="destroyer">
-        <h1>파괴신 공략</h1>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>위치</th>
-                        <th>추천 영웅</th>
-                        <th>무기 / 방어구</th>
-                        <th>장신구 / 보석</th>
-                        <th>역할 및 비고</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
@@ -196,7 +169,7 @@
         </div>
     </div>
 
-    <!-- 4. 연희 구역 -->
+    <!-- 3. 연희 구역 (id="yeonhee") -->
     <div class="guide-section" id="yeonhee">
         <h1>연희 공략</h1>
         <div class="table-container">
@@ -222,10 +195,37 @@
             </table>
         </div>
     </div>
-
-    <!-- 5. 카르마 구역 -->
+  
+    <!-- 4. 카르마 구역 (id="karma") -->
     <div class="guide-section" id="karma">
         <h1>카르마 공략</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>위치</th>
+                        <th>추천 영웅</th>
+                        <th>무기 / 방어구</th>
+                        <th>장신구 / 보석</th>
+                        <th>역할 및 비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 5. 파괴신 구역 (id="destroyer") -->
+    <div class="guide-section" id="destroyer">
+        <h1>파괴신 공략</h1>
         <div class="table-container">
             <table>
                 <thead>
