@@ -6,26 +6,90 @@
     <style>
         body {
             background-color: black;
-            color: white;
+            margin: 0;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            color: white; 
         }
-        a {
-            color: #ff4444; /* 돌아가기 링크 색상 */
-            font-size: 20px;
+
+        /* 5개의 상자를 묶어주는 컨테이너 */
+        .boxes-container {
+            display: flex;
+            gap: 10px; 
+            width: 85%; 
+            height: 50vh; 
+            margin-left: 50px; /* 사이드바 공간만큼 오른쪽으로 밀어줌 */
+        }
+
+        /* 개별 상자의 디자인 (5개가 동일한 비율로 가로 공간을 나눠 가집니다) */
+        .ganglim-box {
+            flex: 1;
+            border: 2px solid red; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
             text-decoration: none;
-            margin-top: 20px;
+        
+            background-color: black;
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-position: center;
+        
+            text-shadow: 
+                -2px -2px 0 #000,
+                 2px -2px 0 #000,
+                -2px  2px 0 #000,
+                 2px  2px 0 #000;
+        }
+
+        /* 왼쪽 사이드바(뒤로 가기) 디자인 */
+        .sidebar-back {
+            position: fixed; 
+            left: 0;
+            top: 0;
+            bottom: 0; 
+            width: 60px; 
+            background-color: #a0a0a0; 
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            z-index: 100; 
+            opacity: 0.35; 
+            transition: opacity 0.3s ease, background-color 0.3s ease; 
+        }
+
+        .sidebar-back:hover {
+            opacity: 1; 
+            background-color: #909090; 
         }
     </style>
 </head>
 <body>
-    <h1>강림 원정대를 눌러서 넘어온 새로운 페이지입니다!</h1>
-    
-    <!-- href="index.html"을 통해 다시 메인 화면으로 돌아갈 수 있습니다 -->
-    <a href="../index.html">메인 화면으로 돌아가기</a>
+    <!-- 왼쪽 회색 사이드바와 하얀색 화살표 (메인 화면인 index.html로 이동) -->
+    <a href="../index.html" class="sidebar-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5"/>
+            <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/>
+        </svg>
+    </a>
+
+    <!-- 5개의 빨간 테두리 상자 -->
+    <div class="boxes-container">
+        <div class="ganglim-box">1구역</div>
+        <div class="ganglim-box">2구역</div>
+        <div class="ganglim-box" style="flex: 2;">3구역</div>
+        <div class="ganglim-box">4구역</div>
+        <div class="ganglim-box">5구역</div>
+    </div>
 </body>
 </html>
