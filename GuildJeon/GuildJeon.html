@@ -2,47 +2,109 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>길드전</title>
     <style>
         body {
             background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
             margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
         }
-        .rectangle-container {
+
+        /* 5개의 팀 상자를 묶어주는 컨테이너 */
+        .teams-container {
+            display: flex;
+            gap: 10px;
+            width: 85%;
+            height: 70vh;
+            margin-left: 50px;
+        }
+
+        /* 개별 팀 상자 디자인 */
+        .team-box {
+            flex: 1;
+            border: 2px solid red;
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px; /* 직사각형 사이의 간격 */
-            width: 90%; /* 화면 전체 너비의 90% 사용 */
-            flex-wrap: wrap; /* 좁은 화면에서는 자동 줄바꿈 */
-        }
-        .red-rectangle {
-            flex: 1; /* 5개의 직사각형이 가로 공간을 균등하게 채움 */
-            min-width: 120px; /* 최소 너비 */
-            height: 200px; /* 직사각형 높이 */
-            background-color: black; /* 내부 검은색 */
-            border: 3px solid red; /* 빨간색 테두리 */
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none; /* 링크 밑줄 제거 */
             box-sizing: border-box;
-            display: flex; /* 내부 텍스트 정렬 */
-            justify-content: center; /* 가로 가운데 정렬 */
-            align-items: center; /* 세로 가운데 정렬 */
-            color: white; /* 하얀색 글씨 */
-            font-size: 24px; /* 글씨 크기 */
-            font-weight: bold; /* 글씨 굵기 */
+        }
+
+        /* 왼쪽 사이드바(뒤로 가기) 디자인 */
+        .sidebar-back {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            background-color: #a0a0a0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0.35;
+            transition: opacity 0.3s ease, background-color 0.3s ease;
+        }
+
+        .sidebar-back:hover {
+            opacity: 1;
+            background-color: #909090;
+        }
+
+        /* 모바일 화면 대응 */
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                padding: 20px 15px 20px 55px; /* 왼쪽 사이드바에 가리지 않도록 여백 확보 */
+                box-sizing: border-box;
+            }
+
+            .teams-container {
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+                gap: 12px;
+            }
+
+            .team-box {
+                width: 100%;
+                height: 90px;
+                font-size: 24px;
+            }
+
+            .sidebar-back {
+                width: 45px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="rectangle-container">
-        <div class="red-rectangle">1팀</div>
-        <div class="red-rectangle">2팀</div>
-        <div class="red-rectangle">3팀</div>
-        <div class="red-rectangle">4팀</div>
-        <div class="red-rectangle">5팀</div>
+    <!-- 왼쪽 회색 사이드바와 하얀색 화살표 (메인 화면으로 이동) -->
+    <a href="../index.html" class="sidebar-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5"/>
+            <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/>
+        </svg>
+    </a>
+
+    <!-- 5개의 빨간 테두리 팀 상자 (클릭 시 다음 페이지로 이동) -->
+    <div class="teams-container">
+        <a href="Guide.html#team1" class="team-box">1팀</a>
+        <a href="Guide.html#team2" class="team-box">2팀</a>
+        <a href="Guide.html#team3" class="team-box">3팀</a>
+        <a href="Guide.html#team4" class="team-box">4팀</a>
+        <a href="Guide.html#team5" class="team-box">5팀</a>
     </div>
 </body>
 </html>
