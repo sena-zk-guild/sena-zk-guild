@@ -2,9 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <!-- 1. [수정] 모바일 화면 반응형 필수 메타 태그 추가 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공성전 세부 공략</title>
+    <title>길드전 세부 공략</title>
     <style>
         html {
             scroll-behavior: smooth; 
@@ -42,7 +41,7 @@
             background-color: #909090; 
         }
 
-        /* --- 7개 요일 구역 디자인 --- */
+        /* --- 5개 팀 구역 디자인 --- */
         .guide-section {
             min-height: 100vh; 
             width: 100%;
@@ -69,7 +68,6 @@
             width: 100%;
             border-collapse: collapse; 
             text-align: center;
-            /* 2. [수정] 열 너비를 지정된 비율로 강제 고정하는 속성 */
             table-layout: fixed;
         }
 
@@ -86,7 +84,6 @@
             font-size: 15px;
             border-bottom: 1px solid #333;
             vertical-align: middle;
-            /* 2. [수정] 긴 글자가 표 밖으로 넘치지 않고 줄바꿈되게 처리 */
             word-break: break-all;
         }
 
@@ -108,7 +105,7 @@
             border: 1px solid #555; 
         }
 
-        /* 2. [수정] 모바일 접속 시 표가 잘리지 않도록 가로 스크롤 추가 */
+        /* 모바일 접속 시 표가 잘리지 않도록 가로 스크롤 추가 */
         @media (max-width: 768px) {
             body {
                 margin-left: 0;
@@ -119,31 +116,30 @@
             }
             .table-container {
                 width: 95%;
-                overflow-x: auto; /* 모바일에서 표가 넘치면 가로 스크롤 생성 */
+                overflow-x: auto;
             }
             table {
-                min-width: 600px; /* 표의 최소 너비를 유지하여 글씨가 구겨지지 않게 함 */
+                min-width: 600px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 왼쪽 회색 사이드바 -->
-    <a href="GongSungJeon.html" class="sidebar-back">
+    <!-- 왼쪽 회색 사이드바 (누르면 1~5팀 선택 화면으로 이동) -->
+    <a href="GuildJeon.html" class="sidebar-back">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M9 14L4 9l5-5"/>
             <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/>
         </svg>
     </a>
 
-    <!-- 1. 월요일 구역 -->
-    <div class="guide-section" id="mon">
-        <h1>월요일 공략 (루디)</h1>
+    <!-- 1. 1팀 구역 -->
+    <div class="guide-section" id="team1">
+        <h1>1팀 공략</h1>
         <div class="table-container">
             <table>
-                <!-- 3. [수정] 각 열의 가로 너비 비율 지정 (총합 100%) -->
                 <colgroup>
-                    <col style="width: 10%;">
+                    <col style="width: 18%;">
                     <col style="width: 15%;">
                     <col style="width: 22%;">
                     <col style="width: 20%;">
@@ -160,60 +156,40 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 1순위</td>
+                        <td>전방 / 속공 1순위</td>
                         <td>
-                            <img src="Guide/Guidemiho.png" class="hero-img" alt="미호"><br>
-                            미호(서브 딜)
+                            <!-- 이미지 추가 시 아래 주석 해제 후 파일명 변경 -->
+                            <!-- <img src="Guide/영웅1.png" class="hero-img" alt="영웅1"><br> -->
+                            영웅 1
                         </td>
-                        <td>복수자 4셋 치확치피 / 공%공%</td>
-                        <td>토벌(공성), 토벌(치확, 약공)</td>
-                        <td>치확 100%, 약공 46%, 치피, 모공 최대한<br>비스킷 6초 이하면 약공 치피 최대한</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (후방)<br>속공 2순위</td>
+                        <td>후방 / 속공 2순위</td>
                         <td>
-                            <img src="Guide/Guidenata.png" class="hero-img" alt="나타"><br>
-                            나타(메인 딜)
+                            <!-- <img src="Guide/영웅2.png" class="hero-img" alt="영웅2"><br> -->
+                            영웅 2
                         </td>
-                        <td>복수자 4셋 치피치피 / 공%공%</td>
-                        <td>토벌(공성), 토벌(치확, 약공)</td>
-                        <td>치확 67%, 약공 46%, 치피,모공 최대한</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 3~5 순위</td>
+                        <td>전방 / 속공 3순위</td>
                         <td>
-                            <img src="Guide/Guidelina.png" class="hero-img" alt="리나"><br>
-                            리나(아군 버프)
+                            <!-- <img src="Guide/영웅3.png" class="hero-img" alt="영웅3"><br> -->
+                            영웅 3
                         </td>
-                        <td>복수자 4셋 치확치피 / 공%공% (고점)<br>성기사 4셋 생%생% / 생%생%</td>
-                        <td>도트 반지(도트)</td>
-                        <td>잘 안죽음 속공 맞추기</td>
-                    </tr>
-                    <tr>
-                        <td>보호 진형 (전방)<br>속공 3~5 순위</td>
-                        <td>
-                            <img src="Guide/Guidebiscuit.png" class="hero-img" alt="비스킷"><br>
-                            비스킷(아군 버프, 버프해제)
-                        </td>
-                        <td>복수자 4셋 치확치피 / 공%공%</td>
-                        <td>도트 반지(도트)</td>
-                        <td>치확 100% 필수, 치피 최대한 챙기기<br>죽는 경우 도트 반지 빼고 권능 반지<br>속공 맞추기</td>
-                    </tr>
-                    <tr>
-                        <td>보호 진형 (전방)<br>속공 3~5 순위</td>
-                        <td>
-                            <img src="Guide/Guideevan.png" class="hero-img" alt="에반"><br>
-                            에반(기절 면역)
-                        </td>
-                        <td>주술사 4셋 방%방% / 받받</td>
-                        <td>도트 반지(도트)</td>
-                        <td>주술사 장비 없으면 수문장이나 복수자<br>속공 맞추기</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
                     <tr>
                         <td>스킬 순서</td>
                         <td colspan="4" style="text-align: center; padding: 12px;">
-                            비스킷 아래(0턴) -> 미호 위 [1라(4턴)] -> 나타 아래[2라(4턴)] -> 나타 위(4턴) -> 비스킷 위(8턴) -> 리나 위(12턴) -> 미호 아해(16턴) -> 미호 위(20턴) -> 나타 아래(24턴) - 나타 위(28턴)
-                            <br> -> 비스킷 위(32턴) -> 비스킷 아래(36턴) -> 미호 아래(40턴) -> 나타 아래(44턴)-> 나타 위(48턴) -> 리나 위(52턴) -> 비스킷 위(56턴) -> 미호 아래(60턴) -> 나타 아래(64턴) -> 나타 위(68턴)
+                            스킬 순서를 입력하세요
                         </td>
                     </tr>
                 </tbody>
@@ -221,9 +197,9 @@
         </div>
     </div>
 
-    <!-- 2. 화요일 구역 -->
-    <div class="guide-section" id="tue">
-        <h1>화요일 공략 (아일린)</h1>
+    <!-- 2. 2팀 구역 -->
+    <div class="guide-section" id="team2">
+        <h1>2팀 공략</h1>
         <div class="table-container">
             <table>
                 <colgroup>
@@ -235,29 +211,49 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치</th>
+                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
                         <th>무기 / 방어구</th>
-                        <th>장신구 / 보석</th>
+                        <th>장신구(세공)</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>전방 / 속공 1순위</td>
+                        <td>영웅 1</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>후방 / 속공 2순위</td>
+                        <td>영웅 2</td>
                         <td>-</td>
                         <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>전방 / 속공 3순위</td>
+                        <td>영웅 3</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>스킬 순서</td>
+                        <td colspan="4" style="text-align: center; padding: 12px;">
+                            스킬 순서를 입력하세요
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- 3. 수요일 구역 -->
-    <div class="guide-section" id="wed">
-        <h1>수요일 공략 (레이첼)</h1>
+    <!-- 3. 3팀 구역 -->
+    <div class="guide-section" id="team3">
+        <h1>3팀 공략</h1>
         <div class="table-container">
             <table>
                 <colgroup>
@@ -269,29 +265,49 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치</th>
+                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
                         <th>무기 / 방어구</th>
-                        <th>장신구 / 보석</th>
+                        <th>장신구(세공)</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>전방 / 속공 1순위</td>
+                        <td>영웅 1</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>후방 / 속공 2순위</td>
+                        <td>영웅 2</td>
                         <td>-</td>
                         <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>전방 / 속공 3순위</td>
+                        <td>영웅 3</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>스킬 순서</td>
+                        <td colspan="4" style="text-align: center; padding: 12px;">
+                            스킬 순서를 입력하세요
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- 4. 목요일 구역 -->
-    <div class="guide-section" id="thu">
-        <h1>목요일 공략 (델론즈)</h1>
+    <!-- 4. 4팀 구역 -->
+    <div class="guide-section" id="team4">
+        <h1>4팀 공략</h1>
         <div class="table-container">
             <table>
                 <colgroup>
@@ -303,29 +319,49 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치</th>
+                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
                         <th>무기 / 방어구</th>
-                        <th>장신구 / 보석</th>
+                        <th>장신구(세공)</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>전방 / 속공 1순위</td>
+                        <td>영웅 1</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>후방 / 속공 2순위</td>
+                        <td>영웅 2</td>
                         <td>-</td>
                         <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>전방 / 속공 3순위</td>
+                        <td>영웅 3</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>스킬 순서</td>
+                        <td colspan="4" style="text-align: center; padding: 12px;">
+                            스킬 순서를 입력하세요
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- 5. 금요일 구역 -->
-    <div class="guide-section" id="fri">
-        <h1>금요일 공략 (제이브)</h1>
+    <!-- 5. 5팀 구역 -->
+    <div class="guide-section" id="team5">
+        <h1>5팀 공략</h1>
         <div class="table-container">
             <table>
                 <colgroup>
@@ -337,88 +373,40 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치</th>
+                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
                         <th>무기 / 방어구</th>
-                        <th>장신구 / 보석</th>
+                        <th>장신구(세공)</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- 6. 토요일 구역 -->
-    <div class="guide-section" id="sat">
-        <h1>토요일 공략 (스파이크)</h1>
-        <div class="table-container">
-            <table>
-                <colgroup>
-                    <col style="width: 18%;">
-                    <col style="width: 15%;">
-                    <col style="width: 22%;">
-                    <col style="width: 20%;">
-                    <col style="width: 25%;">
-                </colgroup>
-                <thead>
-                    <tr>
-                        <th>위치</th>
-                        <th>추천 영웅</th>
-                        <th>무기 / 방어구</th>
-                        <th>장신구 / 보석</th>
-                        <th>역할 및 비고</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>-</td>
-                        <td>-</td>
+                        <td>전방 / 속공 1순위</td>
+                        <td>영웅 1</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- 7. 일요일 구역 -->
-    <div class="guide-section" id="sun">
-        <h1>일요일 공략 (크리스)</h1>
-        <div class="table-container">
-            <table>
-                <colgroup>
-                    <col style="width: 18%;">
-                    <col style="width: 15%;">
-                    <col style="width: 22%;">
-                    <col style="width: 20%;">
-                    <col style="width: 25%;">
-                </colgroup>
-                <thead>
                     <tr>
-                        <th>위치</th>
-                        <th>추천 영웅</th>
-                        <th>무기 / 방어구</th>
-                        <th>장신구 / 보석</th>
-                        <th>역할 및 비고</th>
+                        <td>후방 / 속공 2순위</td>
+                        <td>영웅 2</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
                     </tr>
-                </thead>
-                <tbody>
                     <tr>
+                        <td>전방 / 속공 3순위</td>
+                        <td>영웅 3</td>
                         <td>-</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>스킬 순서</td>
+                        <td colspan="4" style="text-align: center; padding: 12px;">
+                            스킬 순서를 입력하세요
+                        </td>
                     </tr>
                 </tbody>
             </table>
