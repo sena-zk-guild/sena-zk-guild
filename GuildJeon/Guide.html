@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>길드전 팀별 안내</title>
+    <style>
+        html {
+            scroll-behavior: smooth; /* 구역 이동 시 부드럽게 스크롤 */
+        }
 
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 40px 40px 40px 90px; /* 왼쪽 뒤로가기 사이드바 공간 확보 */
+            box-sizing: border-box;
+        }
+
+        /* 왼쪽 사이드바(길드전 팀 선택 화면으로 뒤로 가기) */
+        .sidebar-back {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            background-color: #a0a0a0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            opacity: 0.35;
+            transition: opacity 0.3s ease, background-color 0.3s ease;
+        }
+
+        .sidebar-back:hover {
+            opacity: 1;
+            background-color: #909090;
+        }
+
+        /* 1~5팀 구역을 감싸는 전체 영역 */
+        .guide-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px; /* 각 팀 구역 사이의 간격 */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 개별 팀 구역 박스 */
+        .team-section {
+            border: 2px solid red;
+            background-color: black;
+            padding: 30px;
+            min-height: 80vh; /* 화면을 꽉 채워 해당 구역이 정확히 보이도록 높이 설정 */
+            box-sizing: border-box;
+            scroll-margin-top: 20px; /* 이동했을 때 위쪽 여백 확보 */
+        }
+
+        .team-section h2 {
+            margin-top: 0;
+            font-size: 32px;
+            border-bottom: 1px solid red;
+            padding-bottom: 15px;
+        }
+
+        .team-content {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        /* 모바일 화면 대응 */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px 20px 60px;
+            }
+
+            .sidebar-back {
+                width: 45px;
+            }
+
+            .team-section {
+                padding: 20px;
+                min-height: 70vh;
+            }
+
+            .team-section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 왼쪽 회색 사이드바 (누르면 1~5팀 선택 화면인 GuildJeon.html로 이동) -->
+    <a href="GuildJeon.html" class="sidebar-back">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 14L4 9l5-5"/>
+            <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/>
+        </svg>
+    </a>
+
+    <div class="guide-container">
+        <!-- 1팀 구역 -->
+        <section id="team1" class="team-section">
+            <h2>1팀</h2>
+            <div class="team-content">
+                <p>여기에 1팀 공략 및 덱 구성 내용을 작성하세요.</p>
+            </div>
+        </section>
+
+        <!-- 2팀 구역 -->
+        <section id="team2" class="team-section">
+            <h2>2팀</h2>
+            <div class="team-content">
+                <p>여기에 2팀 공략 및 덱 구성 내용을 작성하세요.</p>
+            </div>
+        </section>
+
+        <!-- 3팀 구역 -->
+        <section id="team3" class="team-section">
+            <h2>3팀</h2>
+            <div class="team-content">
+                <p>여기에 3팀 공략 및 덱 구성 내용을 작성하세요.</p>
+            </div>
+        </section>
+
+        <!-- 4팀 구역 -->
+        <section id="team4" class="team-section">
+            <h2>4팀</h2>
+            <div class="team-content">
+                <p>여기에 4팀 공략 및 덱 구성 내용을 작성하세요.</p>
+            </div>
+        </section>
+
+        <!-- 5팀 구역 -->
+        <section id="team5" class="team-section">
+            <h2>5팀</h2>
+            <div class="team-content">
+                <p>여기에 5팀 공략 및 덱 구성 내용을 작성하세요.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
