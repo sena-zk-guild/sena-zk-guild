@@ -11,8 +11,23 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+        }
+        .rectangle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* 직사각형 사이의 간격 */
+            width: 90%; /* 화면 전체 너비의 90% 사용 */
+            margin: 30px 0;
+            flex-wrap: wrap; /* 모바일 등 좁은 화면에서는 자동 줄바꿈 */
+        }
+        .red-rectangle {
+            flex: 1; /* 5개의 직사각형이 가로 공간을 균등하게 채움 */
+            min-width: 120px; /* 너무 작아지지 않도록 최소 너비 지정 */
+            height: 200px; /* 직사각형 높이 */
+            background-color: red; /* 빨간색 */
         }
         a {
             color: #ff4444; /* 돌아가기 링크 색상 */
@@ -25,6 +40,15 @@
 <body>
     <h1>길드전을 눌러서 넘어온 새로운 페이지입니다!</h1>
     
+    <!-- 빨간색 직사각형 5개 -->
+    <div class="rectangle-container">
+        <div class="red-rectangle"></div>
+        <div class="red-rectangle"></div>
+        <div class="red-rectangle"></div>
+        <div class="red-rectangle"></div>
+        <div class="red-rectangle"></div>
+    </div>
+
     <!-- href="index.html"을 통해 다시 메인 화면으로 돌아갈 수 있습니다 -->
     <a href="../index.html">메인 화면으로 돌아가기</a>
 </body>
