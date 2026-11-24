@@ -95,15 +95,23 @@
             background-color: #222;
         }
 
-        /* --- 영웅 사진 디자인 --- */
-        .hero-img {
-            width: 60px; 
-            height: 60px; 
-            border-radius: 10px; 
-            object-fit: cover;
-            object-position: center 35%; /* 전신 일러스트에서 캐릭터 얼굴 위주로 보이도록 위치 조정 */
-            margin-bottom: 8px; 
-            border: 1px solid #555; 
+        /* --- 영웅 사진 액자(틀) 디자인 --- */
+        .hero-img-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            overflow: hidden; /* 액자 밖으로 나가는 몸통 부분은 깔끔하게 잘라냄 */
+            position: relative;
+            margin: 0 auto 8px auto;
+            border: 1px solid #555;
+            background-color: black;
+        }
+
+        /* --- 실제 고해상도 원본 이미지 --- */
+        .hero-img-box img {
+            position: absolute;
+            max-width: none; /* 60px 제한을 풀어 원본 해상도 그대로 확대 */
+            height: auto;
         }
 
         /* 모바일 접속 시 표가 잘리지 않도록 가로 스크롤 추가 */
@@ -160,7 +168,9 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img src="Guide/선란.jpg" class="hero-img" alt="선란"><br>
+                            <div class="hero-img-box">
+                                <img src="Guide/선란.jpg" alt="선란" style="width: 280px; left: -90px; top: -120px;">
+                            </div>
                             선란
                         </td>
                         <td>보호 진형(후방)<br>속공 2~3순위</td>
@@ -171,7 +181,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="Guide/하연.jpg" class="hero-img" alt="하연"><br>
+                            <div class="hero-img-box">
+                                <img src="Guide/하연.jpg" alt="하연" style="width: 260px; left: -77px; top: -64px;">
+                            </div>
                             하연
                         </td>
                         <td>보호 진형 (전방)<br>속공 1순위</td>
@@ -182,7 +194,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <img src="Guide/이브.jpg" class="hero-img" alt="이브"><br>
+                            <div class="hero-img-box">
+                                <img src="Guide/이브.jpg" alt="이브" style="width: 220px; left: -69px; top: -70px;">
+                            </div>
                             이브
                         </td>
                         <td>보호 진형 (전방)<br>속공 2~3순위</td>
