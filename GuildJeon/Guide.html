@@ -100,7 +100,8 @@
             width: 60px; 
             height: 60px; 
             border-radius: 10px; 
-            object-fit: cover; 
+            object-fit: cover;
+            object-position: center 35%; /* 전신 일러스트에서 캐릭터 얼굴 위주로 보이도록 위치 조정 */
             margin-bottom: 8px; 
             border: 1px solid #555; 
         }
@@ -139,8 +140,8 @@
         <div class="table-container">
             <table>
                 <colgroup>
-                    <col style="width: 15%;">
                     <col style="width: 14%;">
+                    <col style="width: 15%;">
                     <col style="width: 18%;">
                     <col style="width: 15%;">
                     <col style="width: 14%;">
@@ -148,8 +149,8 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
+                        <th>위치 / 속공순위</th>
                         <th>무기 / 방어구</th>
                         <th>장신구(세공)</th>
                         <th>전용장비</th>
@@ -159,41 +160,41 @@
                 <tbody>
                     <tr>
                         <td>
-                            <!-- <img src="Guide/Guideace.png" class="hero-img" alt="에이스"><br> -->
+                            <img src="Guide/선란.jpg" class="hero-img" alt="선란"><br>
                             선란
                         </td>
                         <td>보호 진형(후방)<br>속공 2~3순위</td>
                         <td>선봉장 공%공% / 공%공%</td>
-                        <td>권기 > 권능</td>
+                        <td>권기 &gt; 권능</td>
                         <td>모공4줄</td>
                         <td>선봉장 모공 9300이상 안나오면<br>암살자 치확100가깝게 치피 최대한 극딜</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 1순위</td>
                         <td>
-                            <!-- <img src="Guide/Guideteo.png" class="hero-img" alt="태오"><br> -->
+                            <img src="Guide/하연.jpg" class="hero-img" alt="하연"><br>
                             하연
                         </td>
+                        <td>보호 진형 (전방)<br>속공 1순위</td>
                         <td>조율자 효효 / 받받</td>
-                        <td>대불 > 대랄</td>
+                        <td>대불 &gt; 대랄</td>
                         <td>탄성4줄</td>
                         <td>효적, 효저 100맞추기<br>속공이나 막기세팅은 성기사</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 2~3순위</td>
                         <td>
-                            <!-- <img src="Guide/Guidedellons.png" class="hero-img" alt="델론즈"><br> -->
+                            <img src="Guide/이브.jpg" class="hero-img" alt="이브"><br>
                             이브
                         </td>
+                        <td>보호 진형 (전방)<br>속공 2~3순위</td>
                         <td>암살자 칲효 / 효효</td>
-                        <td>대불 > 불사</td>
+                        <td>대불 &gt; 불사</td>
                         <td>파쇄4줄</td>
                         <td>치확, 약공 50%, 효적 약간, 효저 100</td>
                     </tr>
                     <tr>
                         <td>스킬 순서</td>
-                        <td colspan="4" style="text-align: center; padding: 12px;">
-                            하연 아래 -> 선란 위 -> 이브 아래
+                        <td colspan="5" style="text-align: center; padding: 12px;">
+                            하연 아래 -&gt; 선란 위 -&gt; 이브 아래
                         </td>
                     </tr>
                 </tbody>
@@ -207,56 +208,61 @@
         <div class="table-container">
             <table>
                 <colgroup>
+                    <col style="width: 14%;">
+                    <col style="width: 15%;">
                     <col style="width: 18%;">
                     <col style="width: 15%;">
-                    <col style="width: 22%;">
-                    <col style="width: 20%;">
-                    <col style="width: 25%;">
+                    <col style="width: 14%;">
+                    <col style="width: 24%;">
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
+                        <th>위치 / 속공순위</th>
                         <th>무기 / 방어구</th>
                         <th>장신구(세공)</th>
+                        <th>전용장비</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 1순위</td>
                         <td>
                             <!-- <img src="Guide/Guiderin.png" class="hero-img" alt="린"><br> -->
                             린(회피·진형붕괴)
                         </td>
+                        <td>보호 진형 (전방)<br>속공 1순위</td>
                         <td>복수자 4셋 속공속공 / 생%생%</td>
                         <td>권능 반지(권능)</td>
+                        <td>-</td>
                         <td>선턴 진형 붕괴 및 혼란/실명 견제</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (후방)<br>속공 2순위</td>
                         <td>
                             <!-- <img src="Guide/Guideyeonhee.png" class="hero-img" alt="연희"><br> -->
                             연희(메인 딜·수면)
                         </td>
+                        <td>보호 진형 (후방)<br>속공 2순위</td>
                         <td>복수자 4셋 치확치피 / 공%공%</td>
                         <td>불사 반지(불사)</td>
+                        <td>-</td>
                         <td>치확 100%, 치피 최대한 확보<br>광역 수면 및 방어 무시 딜링</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 3순위</td>
                         <td>
                             <!-- <img src="Guide/Guidevelika.png" class="hero-img" alt="벨리카"><br> -->
                             벨리카(마법 보호막·화상)
                         </td>
+                        <td>보호 진형 (전방)<br>속공 3순위</td>
                         <td>성기사 4셋 생%생% / 받받</td>
                         <td>권능 반지(권능)</td>
+                        <td>-</td>
                         <td>아군 마법 피해 감소 및 광역 화상 보조 딜</td>
                     </tr>
                     <tr>
                         <td>스킬 순서</td>
-                        <td colspan="4" style="text-align: center; padding: 12px;">
-                            린 위 -> 연희 아래(수면) -> 연희 위 -> 벨리카 위
+                        <td colspan="5" style="text-align: center; padding: 12px;">
+                            린 위 -&gt; 연희 아래(수면) -&gt; 연희 위 -&gt; 벨리카 위
                         </td>
                     </tr>
                 </tbody>
@@ -270,56 +276,61 @@
         <div class="table-container">
             <table>
                 <colgroup>
+                    <col style="width: 14%;">
+                    <col style="width: 15%;">
                     <col style="width: 18%;">
                     <col style="width: 15%;">
-                    <col style="width: 22%;">
-                    <col style="width: 20%;">
-                    <col style="width: 25%;">
+                    <col style="width: 14%;">
+                    <col style="width: 24%;">
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
+                        <th>위치 / 속공순위</th>
                         <th>무기 / 방어구</th>
                         <th>장신구(세공)</th>
+                        <th>전용장비</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>밸런스 진형 (전방)<br>속공 1순위</td>
                         <td>
                             <!-- <img src="Guide/Guiderudy.png" class="hero-img" alt="루디"><br> -->
                             루디(방어 버프·기절)
                         </td>
+                        <td>밸런스 진형 (전방)<br>속공 1순위</td>
                         <td>주술사 4셋 방%방% / 받받</td>
                         <td>권능 반지(권능)</td>
+                        <td>-</td>
                         <td>방어 준비 선사용으로 아군 생존력 극대화</td>
                     </tr>
                     <tr>
-                        <td>밸런스 진형 (전방)<br>속공 2순위</td>
                         <td>
                             <!-- <img src="Guide/Guideevan.png" class="hero-img" alt="에반"><br> -->
                             에반(보호막·도발)
                         </td>
+                        <td>밸런스 진형 (전방)<br>속공 2순위</td>
                         <td>수문장 4셋 생%생% / 받받</td>
                         <td>도트 반지(도트)</td>
+                        <td>-</td>
                         <td>보호막 유지 및 상대 단일 딜러 어그로 분산</td>
                     </tr>
                     <tr>
-                        <td>밸런스 진형 (후방)<br>속공 3순위</td>
                         <td>
                             <!-- <img src="Guide/Guidekarin.png" class="hero-img" alt="카린"><br> -->
                             카린(회복·부활)
                         </td>
+                        <td>밸런스 진형 (후방)<br>속공 3순위</td>
                         <td>성기사 4셋 생%생% / 생%생%</td>
                         <td>불사 반지(불사)</td>
+                        <td>-</td>
                         <td>생명력 및 받는 피해 감소 세팅, 아군 부활 담당</td>
                     </tr>
                     <tr>
                         <td>스킬 순서</td>
-                        <td colspan="4" style="text-align: center; padding: 12px;">
-                            루디 위(방어준비) -> 에반 위(보호막) -> 루디 아래(기절) -> 카린 아래(회복)
+                        <td colspan="5" style="text-align: center; padding: 12px;">
+                            루디 위(방어준비) -&gt; 에반 위(보호막) -&gt; 루디 아래(기절) -&gt; 카린 아래(회복)
                         </td>
                     </tr>
                 </tbody>
@@ -333,56 +344,61 @@
         <div class="table-container">
             <table>
                 <colgroup>
+                    <col style="width: 14%;">
+                    <col style="width: 15%;">
                     <col style="width: 18%;">
                     <col style="width: 15%;">
-                    <col style="width: 22%;">
-                    <col style="width: 20%;">
-                    <col style="width: 25%;">
+                    <col style="width: 14%;">
+                    <col style="width: 24%;">
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
+                        <th>위치 / 속공순위</th>
                         <th>무기 / 방어구</th>
                         <th>장신구(세공)</th>
+                        <th>전용장비</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>기본 진형 (전방)<br>속공 1순위</td>
                         <td>
                             <!-- <img src="Guide/Guidespike.png" class="hero-img" alt="스파이크"><br> -->
                             스파이크(상태이상 면역·빙결)
                         </td>
+                        <td>기본 진형 (전방)<br>속공 1순위</td>
                         <td>복수자 4셋 속공속공 / 생%생%</td>
                         <td>빙결 반지(빙결)</td>
+                        <td>-</td>
                         <td>아군 상태이상 면역 부여 및 광역 빙결 CC</td>
                     </tr>
                     <tr>
-                        <td>기본 진형 (후방)<br>속공 2순위</td>
                         <td>
                             <!-- <img src="Guide/Guidekris.png" class="hero-img" alt="크리스"><br> -->
                             크리스(즉사·아군 회복)
                         </td>
+                        <td>기본 진형 (후방)<br>속공 2순위</td>
                         <td>복수자 4셋 약공생% / 받받</td>
                         <td>불사 반지(불사)</td>
+                        <td>-</td>
                         <td>약공 최대한 챙겨 즉사 확률 극대화</td>
                     </tr>
                     <tr>
-                        <td>기본 진형 (전방)<br>속공 3순위</td>
                         <td>
                             <!-- <img src="Guide/Guideknox.png" class="hero-img" alt="녹스"><br> -->
                             녹스(즉사 보조·도발)
                         </td>
+                        <td>기본 진형 (전방)<br>속공 3순위</td>
                         <td>주술사 4셋 방%방% / 받받</td>
                         <td>도트 반지(도트)</td>
+                        <td>-</td>
                         <td>즉사 중첩 보조 및 탱킹</td>
                     </tr>
                     <tr>
                         <td>스킬 순서</td>
-                        <td colspan="4" style="text-align: center; padding: 12px;">
-                            스파이크 아래(광역빙결) -> 크리스 아래 -> 녹스 위 -> 크리스 위
+                        <td colspan="5" style="text-align: center; padding: 12px;">
+                            스파이크 아래(광역빙결) -&gt; 크리스 아래 -&gt; 녹스 위 -&gt; 크리스 위
                         </td>
                     </tr>
                 </tbody>
@@ -390,62 +406,67 @@
         </div>
     </div>
 
-    <!-- 5. 5팀 구역 (약공·단일 저격 덱) -->
+    <!-- 5. 5팀 구역 (단일 돌파 덱) -->
     <div class="guide-section" id="team5">
         <h1>5팀 공략 (단일 돌파 덱)</h1>
         <div class="table-container">
             <table>
                 <colgroup>
+                    <col style="width: 14%;">
+                    <col style="width: 15%;">
                     <col style="width: 18%;">
                     <col style="width: 15%;">
-                    <col style="width: 22%;">
-                    <col style="width: 20%;">
-                    <col style="width: 25%;">
+                    <col style="width: 14%;">
+                    <col style="width: 24%;">
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>위치 / 속공순위</th>
                         <th>추천 영웅</th>
+                        <th>위치 / 속공순위</th>
                         <th>무기 / 방어구</th>
                         <th>장신구(세공)</th>
+                        <th>전용장비</th>
                         <th>역할 및 비고</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 1순위</td>
                         <td>
                             <!-- <img src="Guide/Guideeileene.png" class="hero-img" alt="아일린"><br> -->
                             아일린(공격력 버프·감전)
                         </td>
+                        <td>보호 진형 (전방)<br>속공 1순위</td>
                         <td>복수자 4셋 속공속공 / 생%생%</td>
                         <td>권능 반지(권능)</td>
+                        <td>-</td>
                         <td>아군 물리 공격력 증가 패시브 및 감전 CC</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (후방)<br>속공 2순위</td>
                         <td>
                             <!-- <img src="Guide/Guidemiho.png" class="hero-img" alt="미호"><br> -->
                             미호(메인 딜·회피)
                         </td>
+                        <td>보호 진형 (후방)<br>속공 2순위</td>
                         <td>복수자 4셋 치확치피 / 공%공%</td>
                         <td>불사 반지(불사)</td>
+                        <td>-</td>
                         <td>치확 100%, 약공 46% 이상 세팅<br>상대 핵심 딜러 우선 처치</td>
                     </tr>
                     <tr>
-                        <td>보호 진형 (전방)<br>속공 3순위</td>
                         <td>
                             <!-- <img src="Guide/Guidelina.png" class="hero-img" alt="리나"><br> -->
                             리나(피해량 버프·회복)
                         </td>
+                        <td>보호 진형 (전방)<br>속공 3순위</td>
                         <td>성기사 4셋 생%생% / 생%생%</td>
                         <td>도트 반지(도트)</td>
+                        <td>-</td>
                         <td>아군 피해량 증가 버프 및 유지력 보조</td>
                     </tr>
                     <tr>
                         <td>스킬 순서</td>
-                        <td colspan="4" style="text-align: center; padding: 12px;">
-                            아일린 위(감전) -> 리나 위(버프) -> 미호 위 -> 미호 아래
+                        <td colspan="5" style="text-align: center; padding: 12px;">
+                            아일린 위(감전) -&gt; 리나 위(버프) -&gt; 미호 위 -&gt; 미호 아래
                         </td>
                     </tr>
                 </tbody>
